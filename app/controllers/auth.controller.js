@@ -103,7 +103,7 @@ const sendResetPasswordMail = async (username, email, token, res) => {
       from: config.emailUser, // Replace with your email
       to: email,
       subject: 'Password Reset Request',
-      html: `<p>Hi ${username},</p><p>Please copy the link to reset your password: <a href="http://localhost:7000/api/resetpassword?token=${token}">Reset Password</a></p>`,
+      html: `<p>Hi ${username},</p><p>Please copy the link to reset your password: <a href="http://localhost:4200/api/resetpassword?token=${token}">Reset Password</a></p>`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
